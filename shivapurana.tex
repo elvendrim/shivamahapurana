@@ -1,0 +1,33 @@
+%!TEX TS-program = XeLaTeX
+%!TEX encoding = UTF-8 Unicode
+%!TEX builder = latexmk
+\documentclass{purana}
+\title{Śiva Mahāpurāṇa}
+\subtitle{Śivapurāṇa-māhātmya}
+\author{Kṛṣṇa Dvaipāyana Vyāsa}
+\date{14.12.2020}
+\subject{Śiva Mahāpurāṇa}
+\keywords{purana,shiva,shaivism,bhakti,cosmology,yoga,tirtha}
+\hyphenation{ma-hā-pu-rā-ṇa}
+
+\begin{document}
+\coverpage
+\copyrightpage
+
+\tableofcontents
+
+\pagestyle{plain}
+% ------------- Introduction to Śivamahāpurāṇa --------------------------------%
+\pagenumbering{roman}
+\include{introduction/introduction}
+\pagenumbering{arabic}
+% ------------- Śivapurāṇa-māhātmya -------------------------------------------%
+\include{mahatmya/mahatmya-01}
+\include{mahatmya/mahatmya-02}
+\include{mahatmya/mahatmya-03}
+\include{mahatmya/mahatmya-04}
+\include{mahatmya/mahatmya-05}
+\include{mahatmya/mahatmya-06}
+\include{mahatmya/mahatmya-07}
+% -----------------------------------------------------------------------------%
+\end{document}
