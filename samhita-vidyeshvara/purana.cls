@@ -99,6 +99,11 @@ supported!}
 % Removes pagenumber appearing from TOC
 \addtocontents{toc}{\protect\thispagestyle{empty}}
 \addtocontents{toc}{\protect\vspace*{3ex}} % Put vertical space in the ToC after the ‘Contents’ header
+\RequirePackage{tocbasic}
+\addtotoclist[book.cls]{toc}
+\renewcommand*{\tableofcontents}{\listoftoc[{\contentsname}]{toc}}% ToC under control of tocbasic
+\AfterTOCHead[toc]{\thispagestyle{empty}\pagestyle{empty}}
+\AfterStartingTOC[toc]{\clearpage}
 
 % Colors
 \RequirePackage[usenames, dvipsnames]{xcolor}
@@ -132,6 +137,14 @@ supported!}
 \newenvironment{shloka}[1]
   {\bigskip\center#1\varwidth{\linewidth}}
   {\endvarwidth\endcenter\bigskip}
+
+% Clear header style for all pages
+\RequirePackage{fancyhdr}
+  \pagestyle{fancy}
+    \fancyhf{}%
+    \fancyhead{}%
+    \renewcommand{\headrulewidth}{\iffloatpage{0pt}{0pt}}
+    \fancyfoot[RO,LE]{\thepage}
 
 % Fine-tune hyperreferences (hyperref should be called last)
 \RequirePackage{hyperref}
