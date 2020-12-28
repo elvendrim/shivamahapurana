@@ -269,4 +269,4 @@ supported!}
 \def\viz{\textit{viz.}\@\xspace}
 \def\Viz{\textit{Viz.}\@\xspace}
 \def\etal{\textit{et~al.}\@\xspace}
-\def\etc{\@ifnextchar.{\textit{etc}}{\textit{etc.}\@\xspace}}
+\def\etc{\textit{etc.}\@\xspace}
